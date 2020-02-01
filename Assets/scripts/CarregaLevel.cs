@@ -14,7 +14,7 @@ public class CarregaLevel : MonoBehaviour
     const int LEVEL_ROWS = 7;
 
     public string levelDescriptorStr = string.Empty;
-    public char[,] levelDescriptor =  new char[LEVEL_ROWS,LEVEL_COLUMNS];
+    public char[,] levelDescriptor =  new char[LEVEL_ROWS, LEVEL_COLUMNS];
     void Awake()
     {
         if (levelDescriptorStr.Length != (LEVEL_COLUMNS * LEVEL_ROWS))
