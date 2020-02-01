@@ -9,6 +9,8 @@ public class CarregaLevel : MonoBehaviour
     public GameObject tijolo;
     public GameObject coluna;
     public GameObject buraco;
+    public GameObject agua;
+    public GameObject bandeira;
 
     const int LEVEL_COLUMNS = 10;
     const int LEVEL_ROWS = 7;
@@ -53,7 +55,12 @@ public class CarregaLevel : MonoBehaviour
 
                 if(levelDescriptor[y,x].Equals('B'))
                 {
-                    Instantiate(buraco, new Vector3((float) x, (float) -y, 0f), Quaternion.identity);
+                    Instantiate(bandeira, new Vector3((float) x, (float) -y, 0f), Quaternion.identity);
+                }
+
+                if(levelDescriptor[y,x].Equals('A'))
+                {
+                    Instantiate(agua, new Vector3((float) x, (float) -y, 0f), Quaternion.identity);
                 }
             }
         }
