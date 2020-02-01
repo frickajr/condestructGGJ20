@@ -12,6 +12,9 @@ public class destruir : MonoBehaviour
         if(other.gameObject.tag == "fraco"){
             Destroy(other.gameObject);
         }
+        if(other.gameObject.tag == "chao"){
+            Destroy(other.gameObject);
+        }
         if(other.gameObject.tag == "forte"){
             //Destroy(gameObject);
         }
