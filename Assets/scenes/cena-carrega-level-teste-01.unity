@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tijolo: {fileID: 4989474714490213692, guid: f3a6735658ecdd447b6cf8495d57df1e, type: 3}
-  levelDescriptorStr: '      TTT'
+  levelDescriptorStr: TTTTTTTTT
 --- !u!4 &968289488
 Transform:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.47
+  orthographic size: 3.77
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
