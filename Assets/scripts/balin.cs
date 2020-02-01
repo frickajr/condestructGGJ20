@@ -15,5 +15,6 @@ public class balin : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(balinspeed,rb.velocity.y);
+        //rb.velocity = Vector2.left * balinspeed;
     }
 }

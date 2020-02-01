@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8717859569128649604}
   - component: {fileID: 8717859569128649611}
   - component: {fileID: 8717859569128649607}
+  - component: {fileID: 114231502578816458}
   m_Layer: 0
   m_Name: "MA\xC7\xC3-VERDE"
   m_TagString: Untagged
@@ -94,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbceced955e73041bf8c8d94781d42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balinspeed: 4
+  balinspeed: 10
 --- !u!61 &8717859569128649611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +111,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.38, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 7.16, y: 5.21}
     newSize: {x: 7.16, y: 5.21}
@@ -136,9 +137,21 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114231502578816458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717859569128649610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05591304c1671d44da085b4c85612865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

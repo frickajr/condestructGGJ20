@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class dinu : MonoBehaviour
 {    public Rigidbody2D rb;
      private bool nochao;
+     Animator anim;
+     SpriteRenderer m_SpriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -18,11 +25,30 @@ public class dinu : MonoBehaviour
         if(Input.GetKeyDown("space") && nochao){
             rb.AddForce(Vector3.up * 350);
             nochao = false;
+            anim.SetBool("pulo", true);
         }
+        if (Input.GetAxis("Horizontal") !=0 ){
+            anim.SetBool("walk", true);
+            if (Input.GetAxis("Horizontal")>0)
+                m_SpriteRenderer.flipX = false;
+            else
+                m_SpriteRenderer.flipX = true;
+
+        }else{
+            anim.SetBool("walk",false);
+        }
+         
     }
+   
+   
+   
+   
+   
+   
     void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.tag == "chao"){
             nochao = true;
+            anim.SetBool("pulo", false);
         }
     }
 }

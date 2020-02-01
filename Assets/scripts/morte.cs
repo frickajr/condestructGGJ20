@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class atira : MonoBehaviour
-{   public GameObject objeto;
-    public Transform poti;
+public class morte : MonoBehaviour
+{  
+
+    public int vida;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +15,8 @@ public class atira : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("z")){
-            Instantiate(objeto, poti.position, transform.rotation);
-
+        if (vida == 0){
+            Destroy(gameObject);
         }
     }
 }
