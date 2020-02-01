@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scenes/testepersonagem.unity
+    guid: 98ff85fe1afe1cc4fb50af11f3553521
+  - enabled: 1
+    path: Assets/scenes/cena-carrega-level-teste-01.unity
+    guid: 66cfddaaedda3e640bf4b909f095cef7
+  - enabled: 1
+    path: Assets/scenes/teste-personagens-copia-de-testes-01.unity
+    guid: e2b8e88a5e0201749862bd6fd32569d1
   m_configObjects: {}
