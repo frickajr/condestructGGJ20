@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - chao
+  - indestrutivel
+  - forte
+  - fraco
+  - perigo
   layers:
   - Default
   - TransparentFX

@@ -243,7 +243,10 @@ MonoBehaviour:
   agua: {fileID: 470688349558853714, guid: 18551154f84abcf46a5db2fd6e5b471c, type: 3}
   bandeira: {fileID: 1983583045124070119, guid: 70115a1baf774a149b092d878405a80f,
     type: 3}
-  levelDescriptorStr: '                CC      CC    P CC      P        BTTTTAATTTTTTTTAATTTT'
+  levelColumns: 110
+  levelRows: 7
+  levelDescriptorStr: '                                                                                                                    CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC      CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC    P
+    CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC      P                                                                                                            BTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTT'
 --- !u!4 &1273747853
 Transform:
   m_ObjectHideFlags: 0

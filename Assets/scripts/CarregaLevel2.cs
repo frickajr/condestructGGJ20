@@ -12,20 +12,22 @@ public class CarregaLevel2 : MonoBehaviour
     public GameObject agua;
     public GameObject bandeira;
 
-    const int LEVEL_COLUMNS = 10;
-    const int LEVEL_ROWS = 7;
+    public int levelColumns = 10;
+    public int levelRows = 7;
 
     public string levelDescriptorStr = string.Empty;
-    public char[,] levelDescriptor = new char[LEVEL_ROWS, LEVEL_COLUMNS];
+    public char[,] levelDescriptor;
 
     void Awake()
     {
-        if (levelDescriptorStr.Length != (LEVEL_COLUMNS * LEVEL_ROWS))
+        if (levelDescriptorStr.Length != (levelColumns * levelRows))
         {
-            throw new Exception("Numero de caracteres da string é incompatível com o tamanho da matriz!");
+            throw new Exception("Número de caracteres da string é incompatível com o tamanho da matriz!");
         }
 
-        var linhas = DivideEmLinhas(levelDescriptorStr, LEVEL_COLUMNS);
+        levelDescriptor = new char[levelRows, levelColumns];
+
+        var linhas = DivideEmLinhas(levelDescriptorStr, levelColumns);
 
         int row = 0;
         foreach (var linha in linhas)
@@ -40,9 +42,9 @@ public class CarregaLevel2 : MonoBehaviour
             row++;
         }
 
-        for (int y = 0; y < LEVEL_ROWS; y++)
+        for (int y = 0; y < levelRows; y++)
         {
-            for (int x = 0; x < LEVEL_COLUMNS; x++)
+            for (int x = 0; x < levelColumns; x++)
             {
                 if (levelDescriptor[y, x].Equals('T'))
                 {
