@@ -164,7 +164,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 36294d7aea7db494f8eb640553881128, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -266,4 +266,6 @@ MonoBehaviour:
   agua: {fileID: 470688349558853714, guid: 18551154f84abcf46a5db2fd6e5b471c, type: 3}
   bandeira: {fileID: 1983583045124070119, guid: 70115a1baf774a149b092d878405a80f,
     type: 3}
+  levelColumns: 10
+  levelRows: 7
   levelDescriptorStr: '                CC      CC    P CC      P        BTTTTAATTTTTTTTAATTTT'
