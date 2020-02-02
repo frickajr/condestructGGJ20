@@ -23,7 +23,7 @@ public class atira : MonoBehaviour
     // Update is called once per frame
     async void Update()
     {
-        if (Input.GetKeyDown("c"))
+        if (Input.GetKeyDown("p"))
         {
             if (this.con.ativo)
                 await this.con.Send("ganhei", "", 0, 0);
