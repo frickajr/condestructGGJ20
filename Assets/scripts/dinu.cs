@@ -41,6 +41,9 @@ public class dinu : MonoBehaviour
             }else{
                 anim.SetBool("walk",false);
             }
+        }
+        else {
+            rb.velocity=Vector3.zero;
         }              
     }   
    
