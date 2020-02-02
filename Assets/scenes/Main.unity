@@ -1666,6 +1666,11 @@ PrefabInstance:
       propertyPath: ativo
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4617674334480658279, guid: cc439f611c1c88248a88596c1f5bcd5d,
+        type: 3}
+      propertyPath: apiUrl
+      value: ws://198.50.187.73:8080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc439f611c1c88248a88596c1f5bcd5d, type: 3}
 --- !u!1 &1487278721
