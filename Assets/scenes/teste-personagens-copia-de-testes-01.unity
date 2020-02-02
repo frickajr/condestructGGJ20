@@ -178,7 +178,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 6.69
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -207,6 +207,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1273747851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273747853}
+  - component: {fileID: 1273747852}
+  m_Layer: 0
+  m_Name: LevelBuilder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1273747852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273747851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c08f97f57f454f42adcf779067eaf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tijolo: {fileID: 6556334870086207784, guid: 1212bbc589e5a2d4db73fd460e9a19d8, type: 3}
+  coluna: {fileID: 8589951500702288453, guid: 53a8c064c2da64949b3a0db21a6fd741, type: 3}
+  buraco: {fileID: 3628405290874096035, guid: 5a7b0e7e46dc4114aaab145563a4bc14, type: 3}
+  agua: {fileID: 470688349558853714, guid: 18551154f84abcf46a5db2fd6e5b471c, type: 3}
+  bandeira: {fileID: 1983583045124070119, guid: 70115a1baf774a149b092d878405a80f,
+    type: 3}
+  levelDescriptorStr: '                CC      CC    P CC      P        BTTTTAATTTTTTTTAATTTT'
+--- !u!4 &1273747853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273747851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5142493, y: 0.36817166, z: 0.007543152}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711978943 stripped
 GameObject:
@@ -249,25 +299,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1711978951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711978943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c08f97f57f454f42adcf779067eaf62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tijolo: {fileID: 6556334870086207784, guid: 1212bbc589e5a2d4db73fd460e9a19d8, type: 3}
-  coluna: {fileID: 8589951500702288453, guid: 53a8c064c2da64949b3a0db21a6fd741, type: 3}
-  buraco: {fileID: 3628405290874096035, guid: 5a7b0e7e46dc4114aaab145563a4bc14, type: 3}
-  agua: {fileID: 470688349558853714, guid: 18551154f84abcf46a5db2fd6e5b471c, type: 3}
-  bandeira: {fileID: 1983583045124070119, guid: 70115a1baf774a149b092d878405a80f,
-    type: 3}
-  levelDescriptorStr: '                CC      CC    P CC      P        BTTTTAATTTTTTTTAATTTT'
 --- !u!1001 &1295836782407167569
 PrefabInstance:
   m_ObjectHideFlags: 0

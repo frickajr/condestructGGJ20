@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 968289488}
   - component: {fileID: 968289487}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LevelBuilder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.1
+  orthographic size: 18.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
