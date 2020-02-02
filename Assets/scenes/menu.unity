@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buton: {fileID: 1013385785}
-  level: testepersonagem
+  level: main
 --- !u!95 &1013385789
 Animator:
   serializedVersion: 3

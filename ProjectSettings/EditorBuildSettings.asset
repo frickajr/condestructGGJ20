@@ -6,18 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/scenes/tutorial.unity
+    guid: ba2b51e23d0edb942946728d90350ea1
+  - enabled: 1
+    path: Assets/scenes/tutorial2.unity
+    guid: b4def6f66e564ae4ba80d5cf3b2717e6
+  - enabled: 1
+    path: Assets/scenes/tutorial3.unity
+    guid: bb87e5ae13148bd44b93167ce7a35a3b
+  - enabled: 1
+    path: Assets/scenes/creditos.unity
+    guid: 18430a26ac46e9e4fab347a8264c15fb
+  - enabled: 1
     path: Assets/scenes/menu.unity
     guid: 628310efcef89e54992846cca9ddd050
+  - enabled: 1
+    path: Assets/scenes/Main.unity
+    guid: e814885fbe9c21549973f1191cda0ec7
   - enabled: 0
-    path: Assets/scenes/MenuInicial.unity
-    guid: 60deff23778038f49b4666d9536512ad
-  - enabled: 1
-    path: Assets/scenes/testepersonagem.unity
-    guid: 98ff85fe1afe1cc4fb50af11f3553521
-  - enabled: 1
-    path: Assets/scenes/cena-carrega-level-teste-01.unity
-    guid: 66cfddaaedda3e640bf4b909f095cef7
-  - enabled: 1
-    path: Assets/scenes/teste-personagens-copia-de-testes-01.unity
-    guid: e2b8e88a5e0201749862bd6fd32569d1
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
