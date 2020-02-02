@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 485949510743510068}
   - component: {fileID: 7087217122552899718}
   - component: {fileID: -282693349217385791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terra
   m_TagString: chao
   m_Icon: {fileID: 0}

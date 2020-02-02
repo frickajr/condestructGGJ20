@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5540421182230002276}
   - component: {fileID: 2498064841568697614}
   - component: {fileID: 2528440133214048699}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tijolos
   m_TagString: chao
   m_Icon: {fileID: 0}

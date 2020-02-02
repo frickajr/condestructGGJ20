@@ -13,7 +13,7 @@ public class atira : MonoBehaviour
     Animator animator;
 
     void Awake () {
-        this.con = GameObject.Find ("WS").GetComponent<Connect> ();
+        this.con = GameObject.Find("WS").GetComponent<Connect> ();
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }

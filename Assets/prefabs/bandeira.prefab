@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4374005006785443751}
   - component: {fileID: 3517191150018292459}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bandeira
   m_TagString: Untagged
   m_Icon: {fileID: 0}

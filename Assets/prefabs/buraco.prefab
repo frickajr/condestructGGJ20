@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2798268700025038558}
   - component: {fileID: 7804915623178703504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: buraco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
