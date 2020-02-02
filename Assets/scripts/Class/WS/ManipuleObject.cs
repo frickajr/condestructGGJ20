@@ -9,7 +9,16 @@ using UnityEngine;
 
 public class ManipuleObject : MonoBehaviour {
 
-  public GameObject tijolo;
+  public GameObject tijolo, perdeu;
+
+  GameObject camera;
+  dinu player;
+
+  void Awake()
+  {
+    camera = GameObject.Find("Main Camera");
+    player = GameObject.FindWithTag("Player").GetComponent<dinu>();
+  }
 
   public void InstanceObject (TypeObject tp) {
     switch (tp.asset) {
@@ -31,6 +40,15 @@ public class ManipuleObject : MonoBehaviour {
         Destroy(go);
         return;
       }
+    }
+  }
+
+  public void ShowMensagem (TypeObject tp) {
+    if (tp.type == "ganhei" && tp.fuiEu == false) {
+      Debug.Log("Perdi :(");
+      Instantiate(perdeu, new Vector3(camera.transform.position.x,
+                                            camera.transform.position.y, 0), transform.rotation);
+      player.pause = true;
     }
   }
 }
