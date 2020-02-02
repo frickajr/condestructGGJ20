@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4607434729419049195}
   - component: {fileID: 4607434729419049109}
   - component: {fileID: 4607434729419049194}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 26c3d5d83b5d2ff4ba71f0bfadf371a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5038879729759007334}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: potiFlip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6059046682391689222}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: poti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
