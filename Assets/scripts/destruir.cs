@@ -6,7 +6,7 @@ public class destruir : MonoBehaviour {
     private Connect con;
 
     void Awake () {
-        // this.con = GameObject.Find ("WS").GetComponent<Connect> ();
+        this.con = GameObject.Find ("WS").GetComponent<Connect> ();
     }
     // Start is called before the first frame update
 	
@@ -26,7 +26,8 @@ public class destruir : MonoBehaviour {
         if (other.gameObject.tag == "chao") {
             ScreenItens.instance.Objetos.Remove(other.gameObject.GetInstanceID());
             Vector3 vec = other.gameObject.transform.position;
-            // await this.con.Send ("destruir", "chao", vec.x, vec.y);
+            if (this.con.ativo)
+                await this.con.Send ("destruir", "chao", vec.x, vec.y);
             Destroy (other.gameObject);
         }
         if (other.gameObject.tag == "forte") {
