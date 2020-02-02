@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class Connect : MonoBehaviour {
     public Boolean ativo = false;
-    private string apiUrl = "ws://10.150.0.71:8080";
+    public string apiUrl = "ws://198.50.187.73:8080";
     private WebSocket webSocket = null;
     private ManipuleObject man;
 
