@@ -5,6 +5,7 @@ using UnityEngine;
 using System;
 using Newtonsoft.Json;
 
+
 public class CarregaLevel2 : MonoBehaviour
 {
     public GameObject tijolo;
@@ -19,10 +20,15 @@ public class CarregaLevel2 : MonoBehaviour
     public string levelDescriptorStr = string.Empty;
     public char[,] levelDescriptor;
 
-    public Hashtable Objetos = new Hashtable();
+    public GameObject Objetos;
 
     void Awake()
     {
+        if (ScreenItens.instance == null)
+        {
+            Instantiate(Objetos);
+        }
+
         if (levelDescriptorStr.Length != (levelColumns * levelRows))
         {
             throw new Exception("Número de caracteres da string é incompatível com o tamanho da matriz!");
@@ -84,7 +90,7 @@ public class CarregaLevel2 : MonoBehaviour
                 var teste = Instantiate(temp, new Vector3((float)x, (float)-y, 0f), Quaternion.identity);
                 novoObjeto.x = x;
                 novoObjeto.y = -y;
-                Objetos.Add(teste.GetInstanceID(),Newtonsoft.Json.JsonConvert.SerializeObject(novoObjeto));
+                ScreenItens.instance.Objetos.Add(teste.GetInstanceID(),Newtonsoft.Json.JsonConvert.SerializeObject(novoObjeto));
 
             }
         }

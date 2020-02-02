@@ -247,6 +247,7 @@ MonoBehaviour:
   levelRows: 7
   levelDescriptorStr: '                                                                                                                    CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC      CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC    P
     CC        CC        CC        CC        CC        CC        CC        CC        CC        CC        CC      P                                                                                                            BTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTTTTTTAATTTT'
+  Objetos: {fileID: 3991016310872907539, guid: 45a09b7d79f81a24587d94bb9a3c31a1, type: 3}
 --- !u!4 &1273747853
 Transform:
   m_ObjectHideFlags: 0
@@ -438,4 +439,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1295836783917471635, guid: c88c54a4aa2e209408cc734cd711d659, type: 3}
+    - {fileID: 1711978951, guid: c88c54a4aa2e209408cc734cd711d659, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c88c54a4aa2e209408cc734cd711d659, type: 3}
