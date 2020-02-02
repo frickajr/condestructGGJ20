@@ -54,8 +54,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295836782672202805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.81, y: 0.07122094, z: 0}
+  m_LocalScale: {x: 0.12348381, y: 0.111104645, z: 1}
   m_Children: []
   m_Father: {fileID: 1295836783917471636}
   m_RootOrder: 0
@@ -74,7 +74,9 @@ GameObject:
   - component: {fileID: 1295836783917471632}
   - component: {fileID: 1295836783917471633}
   - component: {fileID: 1711978946}
+  - component: {fileID: 4385383793503757692}
   - component: {fileID: 1711978950}
+  - component: {fileID: 1711978951}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -192,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objeto: {fileID: 8717859569128649610, guid: d0ec52f4baeaf22419367db6b36d2f81, type: 3}
+  tijolo: {fileID: 8589951500702288453, guid: 53a8c064c2da64949b3a0db21a6fd741, type: 3}
   poti: {fileID: 1295836782672202804}
   potiFlip: {fileID: 357254740}
 --- !u!70 &1711978946
@@ -209,6 +212,22 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.018586647, y: 0.052832585}
   m_Size: {x: 0.5954475, y: 1.3943349}
+  m_Direction: 0
+--- !u!70 &4385383793503757692
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295836783917471726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.018586647, y: 0.11646886}
+  m_Size: {x: 0.5954475, y: 1.267063}
   m_Direction: 0
 --- !u!95 &1711978950
 Animator:
@@ -229,3 +248,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1711978951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295836783917471726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c08f97f57f454f42adcf779067eaf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tijolo: {fileID: 6556334870086207784, guid: 1212bbc589e5a2d4db73fd460e9a19d8, type: 3}
+  coluna: {fileID: 8589951500702288453, guid: 53a8c064c2da64949b3a0db21a6fd741, type: 3}
+  buraco: {fileID: 3628405290874096035, guid: 5a7b0e7e46dc4114aaab145563a4bc14, type: 3}
+  agua: {fileID: 470688349558853714, guid: 18551154f84abcf46a5db2fd6e5b471c, type: 3}
+  bandeira: {fileID: 1983583045124070119, guid: 70115a1baf774a149b092d878405a80f,
+    type: 3}
+  levelDescriptorStr: '                CC      CC    P CC      P        BTTTTAATTTTTTTTAATTTT'

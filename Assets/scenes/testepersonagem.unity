@@ -656,12 +656,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1295836783917471633, guid: c88c54a4aa2e209408cc734cd711d659,
-        type: 3}
-      propertyPath: tijolo
-      value: 
-      objectReference: {fileID: 4989474714490213692, guid: f3a6735658ecdd447b6cf8495d57df1e,
-        type: 3}
     - target: {fileID: 1295836783917471636, guid: c88c54a4aa2e209408cc734cd711d659,
         type: 3}
       propertyPath: m_LocalPosition.x

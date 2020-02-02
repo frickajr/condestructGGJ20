@@ -310,6 +310,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.111104645
       objectReference: {fileID: 0}
+    - target: {fileID: 1295836783917471633, guid: c88c54a4aa2e209408cc734cd711d659,
+        type: 3}
+      propertyPath: tijolo
+      value: 
+      objectReference: {fileID: 8589951500702288453, guid: 53a8c064c2da64949b3a0db21a6fd741,
+        type: 3}
     - target: {fileID: 1295836783917471636, guid: c88c54a4aa2e209408cc734cd711d659,
         type: 3}
       propertyPath: m_LocalPosition.x
