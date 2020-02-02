@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 public class dinu : MonoBehaviour
-{    public Rigidbody2D rb;
+{    Rigidbody2D rb;
      private bool nochao;
      Animator anim;
      SpriteRenderer m_SpriteRenderer;

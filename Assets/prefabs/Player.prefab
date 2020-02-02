@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &357254739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357254740}
+  m_Layer: 0
+  m_Name: potiFlip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &357254740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357254739}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1295836783917471636}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1295836782672202805
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1295836782672202804}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: poti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,8 +54,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295836782672202805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0.07122094, z: 0}
-  m_LocalScale: {x: 0.12348381, y: 0.111104645, z: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1295836783917471636}
   m_RootOrder: 0
@@ -64,6 +94,7 @@ Transform:
   m_LocalScale: {x: 1.174, y: 1.376, z: 1}
   m_Children:
   - {fileID: 1295836782672202804}
+  - {fileID: 357254740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f5a593b0de9594e89863fa7f1ef777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!114 &1295836783917471633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objeto: {fileID: 8717859569128649610, guid: d0ec52f4baeaf22419367db6b36d2f81, type: 3}
   poti: {fileID: 1295836782672202804}
+  potiFlip: {fileID: 357254740}
 --- !u!70 &1711978946
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

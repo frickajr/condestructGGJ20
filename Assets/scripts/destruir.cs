@@ -16,7 +16,7 @@ public class destruir : MonoBehaviour
             Destroy(other.gameObject);
         }
         if(other.gameObject.tag == "forte"){
-            //Destroy(gameObject);
+            other.gameObject.GetComponent<morte>().vida --;
         }
         Destroy(gameObject);
     }
