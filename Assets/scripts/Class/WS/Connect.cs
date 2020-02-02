@@ -29,7 +29,7 @@ public class Connect : MonoBehaviour {
     public async Task Send (string type, string asset, float x, float y) {
         if (ativo)
         {
-            var json = new TypeObject (this.man, type, asset, x, y).ToJson ();
+            var json = new TypeObject (this.man, type, asset, x, y, false).ToJson ();
             var buffer = new ArraySegment<byte> (Encoding.UTF8.GetBytes (json));
             await this.webSocket.SendAsync (buffer, WebSocketMessageType.Text, true, CancellationToken.None);
             return;
@@ -49,7 +49,7 @@ public class Connect : MonoBehaviour {
                     case WebSocketMessageType.Binary:
                         string json = Encoding.UTF8.GetString (buffer.Array, 0, result.Count);
                         var obj = Newtonsoft.Json.Linq.JObject.Parse (json);
-                        TypeObject man = new TypeObject (this.man, (string) obj["type"], (string) obj["asset"], (float) obj["x"], (float) obj["y"]);
+                        TypeObject man = new TypeObject (this.man, (string) obj["type"], (string) obj["asset"], (float) obj["x"], (float) obj["y"], (bool) obj["fuiEu"]);
                         man.Run ();
                         break;
                 }
