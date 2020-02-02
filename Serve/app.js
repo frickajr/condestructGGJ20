@@ -7,14 +7,21 @@ wss.on('connection', ws => {
 
   ws.on('message', message => {
     console.log(message);
-    broadcast(message);
+    broadcast(ws, message);
   });
 });
 
-function broadcast(msg) {
+function broadcast(ws,  msg) {
+  let objMsg = JSON.parse(msg);
+
   wss.clients.forEach((client) => {
+    if (client == ws) {
+      objMsg.fuiEu = true;
+    } else {
+      objMsg.fuiEu = false;
+    }
     if (client.readyState === WebSocket.OPEN) {
-      client.send(msg);
+      client.send(JSON.stringify(objMsg));
     }
   });
 }
