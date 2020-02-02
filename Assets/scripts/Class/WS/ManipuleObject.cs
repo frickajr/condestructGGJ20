@@ -12,10 +12,12 @@ public class ManipuleObject : MonoBehaviour {
   public GameObject tijolo, perdeu;
 
   GameObject camera;
+  dinu player;
 
   void Awake()
   {
     camera = GameObject.Find("Main Camera");
+    player = GameObject.FindWithTag("Player").GetComponent<dinu>();
   }
 
   public void InstanceObject (TypeObject tp) {
@@ -46,7 +48,7 @@ public class ManipuleObject : MonoBehaviour {
       Debug.Log("Perdi :(");
       Instantiate(perdeu, new Vector3(camera.transform.position.x,
                                             camera.transform.position.y, 0), transform.rotation);
-      Time.timeScale = 0f;
+      player.pause = true;
     }
   }
 }

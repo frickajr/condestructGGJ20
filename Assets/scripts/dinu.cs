@@ -9,6 +9,7 @@ public class dinu : MonoBehaviour
      SpriteRenderer m_SpriteRenderer;
      private Connect con;
      public GameObject vitoria, camera;
+     public bool pause;
 
     // Start is called before the first frame update
     void Awake()
@@ -23,23 +24,24 @@ public class dinu : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(4* Input.GetAxis("Horizontal"), rb.velocity.y);
-        if(Input.GetKeyDown("space") && nochao){
-            rb.AddForce(Vector3.up * 350);
-            nochao = false;
-            anim.SetBool("pulo", true);
-        }
-        if (Input.GetAxis("Horizontal") !=0 ){
-            anim.SetBool("walk", true);
-            if (Input.GetAxis("Horizontal")>0)
-                m_SpriteRenderer.flipX = false;
-            else
-                m_SpriteRenderer.flipX = true;
+        if (!pause) {
+            rb.velocity = new Vector2(4* Input.GetAxis("Horizontal"), rb.velocity.y);
+            if(Input.GetKeyDown("space") && nochao){
+                rb.AddForce(Vector3.up * 350);
+                nochao = false;
+                anim.SetBool("pulo", true);
+            }
+            if (Input.GetAxis("Horizontal") !=0 ){
+                anim.SetBool("walk", true);
+                if (Input.GetAxis("Horizontal")>0)
+                    m_SpriteRenderer.flipX = false;
+                else
+                    m_SpriteRenderer.flipX = true;
 
-        }else{
-            anim.SetBool("walk",false);
-        }
-         
+            }else{
+                anim.SetBool("walk",false);
+            }
+        }              
     }   
    
     void OnCollisionEnter2D(Collision2D other){
@@ -54,7 +56,7 @@ public class dinu : MonoBehaviour
             Debug.Log("ganhei");
             Instantiate(vitoria, new Vector3(camera.transform.position.x,
                                             camera.transform.position.y, 0), transform.rotation);
-            Time.timeScale = 0f;
+            pause = true;
             if (this.con.ativo)
                 await this.con.Send ("ganhei","",0,0);
         }
