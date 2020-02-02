@@ -21,6 +21,8 @@ public class atira : MonoBehaviour
     // Update is called once per frame
     async void Update()
     {
+        if (Input.GetKeyDown("c"))
+            await this.con.Send ("ganhei","",0,0);
         if (Input.GetKeyDown("x")){
             if (m_SpriteRenderer.flipX) {
                 Vector3 posicao = new Vector3 ( (int)potiFlip.position.x, (int)potiFlip.position.y,0);
