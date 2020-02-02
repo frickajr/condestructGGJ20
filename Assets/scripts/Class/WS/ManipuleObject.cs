@@ -33,4 +33,10 @@ public class ManipuleObject : MonoBehaviour {
       }
     }
   }
+
+  public void ShowMensagem (TypeObject tp) {
+    if (tp.type == "ganhei" && tp.fuiEu == false) {
+      Debug.Log("Perdi :(");
+    }
+  }
 }
