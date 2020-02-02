@@ -24,12 +24,18 @@ public class atira : MonoBehaviour
         if (Input.GetKeyDown("x")){
             if (m_SpriteRenderer.flipX) {
                 Vector3 posicao = new Vector3 ( (int)potiFlip.position.x, (int)potiFlip.position.y,0);
-                await this.con.Send ("criar", "tijolo", posicao.x, posicao.y);
+                if (this.con.ativo)
+                    await this.con.Send ("criar", "tijolo", posicao.x, posicao.y);
+                else
+                    Instantiate(tijolo, posicao, potiFlip.rotation);
             }
             else
             {
                 Vector3 posicao = new Vector3 ( (int)poti.position.x, (int)poti.position.y,0);
-                await this.con.Send ("criar", "tijolo", posicao.x, posicao.y);
+                if (this.con.ativo)
+                    await this.con.Send ("criar", "tijolo", posicao.x, posicao.y);
+                else
+                    Instantiate(tijolo, posicao, potiFlip.rotation);
             }
 
         }

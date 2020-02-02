@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class Connect : MonoBehaviour {
     public Boolean ativo = false;
-    private string apiUrl = "ws://localhost:8080";
+    private string apiUrl = "ws://10.150.0.71:8080";
     private WebSocket webSocket = null;
     private ManipuleObject man;
 
@@ -21,7 +21,7 @@ public class Connect : MonoBehaviour {
     async void Start () {
         if (ativo)
         {
-            this.webSocket = await new WebSocketClientFactory ().ConnectAsync (new Uri (this.apiUrl));
+            this.webSocket = await new WebSocketClientFactory ().ConnectAsync (new Uri (this.apiUrl));     
             await this.Receive ();
         }
     }
