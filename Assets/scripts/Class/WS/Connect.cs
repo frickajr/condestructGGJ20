@@ -18,7 +18,6 @@ public class Connect : MonoBehaviour {
 
     async void Start () {
         this.webSocket = await new WebSocketClientFactory ().ConnectAsync (new Uri (this.apiUrl));
-        await this.Send ("criar", "tijolo", 0, 0);
         await this.Receive ();
     }
 
@@ -40,7 +39,6 @@ public class Connect : MonoBehaviour {
                 case WebSocketMessageType.Binary:
                     string json = Encoding.UTF8.GetString (buffer.Array, 0, result.Count);
                     var obj = Newtonsoft.Json.Linq.JObject.Parse (json);
-
                     TypeObject man = new TypeObject (this.man, (string) obj["type"], (string) obj["asset"], (float) obj["x"], (float) obj["y"]);
                     man.Run ();
                     break;
