@@ -9,11 +9,13 @@ public class atira : MonoBehaviour
     public Transform poti, potiFlip;
 
     SpriteRenderer m_SpriteRenderer;
+    Animator animator;
 
     // Start is called before the first frame update
     void Awake()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,8 @@ public class atira : MonoBehaviour
         }
 
         if (Input.GetKeyDown("z")){
+
+            animator.SetTrigger("acao");
 
             if (m_SpriteRenderer.flipX) {
                 GameObject clone;

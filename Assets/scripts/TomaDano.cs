@@ -22,7 +22,7 @@ public class TomaDano : MonoBehaviour
     IEnumerator Pisca()
     {
         float newX = transform.position.x - 5f;
-        spriteRenderer.color = new Color32(255, 92, 45, 255);
+        spriteRenderer.color = new Color32(231, 37, 27, 255);
         if (newX < 0f) newX = 0f;
         transform.position = new Vector3(newX, 0f, 0f);
         for (var i = 0; i < 10; i++)
