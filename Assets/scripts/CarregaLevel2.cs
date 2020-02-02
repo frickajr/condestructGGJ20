@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System;
+using Newtonsoft.Json;
 
 public class CarregaLevel2 : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CarregaLevel2 : MonoBehaviour
 
     public string levelDescriptorStr = string.Empty;
     public char[,] levelDescriptor;
+
+    public Hashtable Objetos = new Hashtable();
 
     void Awake()
     {
@@ -46,25 +49,43 @@ public class CarregaLevel2 : MonoBehaviour
         {
             for (int x = 0; x < levelColumns; x++)
             {
-                if (levelDescriptor[y, x].Equals('T'))
+                GameObject temp = null;
+                ObjetosEmTela novoObjeto = new ObjetosEmTela();
+
+                switch (levelDescriptor[y, x])
                 {
-                    Instantiate(tijolo, new Vector3((float)x, (float)-y, 0f), Quaternion.identity);
+                    case 'T':
+                        temp = this.tijolo;
+                        novoObjeto.tipo = "tijolo";
+                        break;
+                    case 'C':
+                        temp = this.coluna;
+                        novoObjeto.tipo = "coluna";
+                        break;
+                    case 'B':
+                        temp = this.bandeira;
+                        novoObjeto.tipo = "bandeira";
+                        break;
+                    case 'A':
+                        temp = this.agua;
+                        novoObjeto.tipo = "agua";
+                        break;
+                    default:
+                        break;
                 }
 
-                if (levelDescriptor[y, x].Equals('C'))
+                if (temp == null)
                 {
-                    Instantiate(coluna, new Vector3((float)x, (float)-y, 0f), Quaternion.identity);
+                    continue;
                 }
 
-                if (levelDescriptor[y, x].Equals('B'))
-                {
-                    Instantiate(bandeira, new Vector3((float)x, (float)-y, 0f), Quaternion.identity);
-                }
+													  
+				 
+                var teste = Instantiate(temp, new Vector3((float)x, (float)-y, 0f), Quaternion.identity);
+                novoObjeto.x = x;
+                novoObjeto.y = -y;
+                Objetos.Add(teste.GetInstanceID(),Newtonsoft.Json.JsonConvert.SerializeObject(novoObjeto));
 
-                if (levelDescriptor[y, x].Equals('A'))
-                {
-                    Instantiate(agua, new Vector3((float)x, (float)-y, 0f), Quaternion.identity);
-                }
             }
         }
     }
@@ -79,6 +100,14 @@ public class CarregaLevel2 : MonoBehaviour
     {
         return Enumerable.Range(0, simbolos.Length / numSimbolosPorLinha)
             .Select(i => simbolos.Substring(i * numSimbolosPorLinha, numSimbolosPorLinha));
+    }
+
+    
+    public class ObjetosEmTela
+    {
+        public int x { get; set;}
+        public int y { get; set; }
+        public string tipo { get; set; }
     }
 }
 

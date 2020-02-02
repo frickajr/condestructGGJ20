@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3644303382471608799}
   - component: {fileID: 8785738794337866861}
   m_Layer: 0
-  m_Name: Agua
-  m_TagString: Untagged
+  m_Name: agua
+  m_TagString: perigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
