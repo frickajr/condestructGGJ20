@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8717859569128649611}
   - component: {fileID: 8717859569128649607}
   - component: {fileID: 114231502578816458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "MA\xC7\xC3-VERDE"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 96b0020d29e14d14994514de21873c64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
