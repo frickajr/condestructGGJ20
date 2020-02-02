@@ -3,42 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class atira : MonoBehaviour
-{   
-    
+{
+    private Connect con;
+
+    void Awake () {
+        this.con = GameObject.Find ("WS").GetComponent<Connect> ();
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public GameObject objeto, tijolo;
     public Transform poti, potiFlip;
 
     SpriteRenderer m_SpriteRenderer;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        m_SpriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
     // Update is called once per frame
-    void Update()
+    async void Update()
     {
         if (Input.GetKeyDown("x")){
-
-            //Debug.Log(potiFlip.position);
-
-            
-            //Debug.Log(posicao);
-
-
             if (m_SpriteRenderer.flipX) {
-                Vector3 posicao = new Vector3 ( (int)potiFlip.position.x,
-                                            (int)potiFlip.position.y,0);
-                Instantiate(tijolo, posicao, potiFlip.rotation);
-            }             
+                Vector3 posicao = new Vector3 ( (int)potiFlip.position.x, (int)potiFlip.position.y,0);
+                await this.con.Send ("criar", "tijolo", posicao.x, posicao.y);
+            }
             else
             {
-                Vector3 posicao = new Vector3 ( (int)poti.position.x,
-                                            (int)poti.position.y,0);
-                Instantiate(tijolo, posicao, potiFlip.rotation);
-            }            
-                
+                Vector3 posicao = new Vector3 ( (int)poti.position.x, (int)poti.position.y,0);
+                await this.con.Send ("criar", "tijolo", posicao.x, posicao.y);
+            }
+
         }
 
         if (Input.GetKeyDown("z")){
@@ -47,8 +38,8 @@ public class atira : MonoBehaviour
                 GameObject clone;
                 clone = Instantiate(objeto, potiFlip.position, potiFlip.rotation) as GameObject;
                 clone.GetComponent<balin>().balinspeed *= -1;
-            }             
-            else            
+            }
+            else
                 Instantiate(objeto, poti.position, potiFlip.rotation);
         }
     }
