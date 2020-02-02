@@ -8,6 +8,7 @@ public class dinu : MonoBehaviour
      Animator anim;
      SpriteRenderer m_SpriteRenderer;
      private Connect con;
+     public GameObject vitoria, camera;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,6 +17,7 @@ public class dinu : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         this.con = GameObject.Find("WS").GetComponent<Connect> ();
+        camera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -50,6 +52,9 @@ public class dinu : MonoBehaviour
     async void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "ganhei"){
             Debug.Log("ganhei");
+            Instantiate(vitoria, new Vector3(camera.transform.position.x,
+                                            camera.transform.position.y, 0), transform.rotation);
+            Time.timeScale = 0f;
             if (this.con.ativo)
                 await this.con.Send ("ganhei","",0,0);
         }

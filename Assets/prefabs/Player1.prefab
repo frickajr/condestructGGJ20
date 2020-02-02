@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f5a593b0de9594e89863fa7f1ef777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vitoria: {fileID: 6994218434990459216, guid: d2bd4687beee0aa4f9cdaa95a380e4b6, type: 3}
+  camera: {fileID: 0}
 --- !u!50 &4607434729419049192
 Rigidbody2D:
   serializedVersion: 4

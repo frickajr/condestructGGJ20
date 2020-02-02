@@ -9,7 +9,14 @@ using UnityEngine;
 
 public class ManipuleObject : MonoBehaviour {
 
-  public GameObject tijolo;
+  public GameObject tijolo, perdeu;
+
+  GameObject camera;
+
+  void Awake()
+  {
+    camera = GameObject.Find("Main Camera");
+  }
 
   public void InstanceObject (TypeObject tp) {
     switch (tp.asset) {
@@ -37,6 +44,9 @@ public class ManipuleObject : MonoBehaviour {
   public void ShowMensagem (TypeObject tp) {
     if (tp.type == "ganhei" && tp.fuiEu == false) {
       Debug.Log("Perdi :(");
+      Instantiate(perdeu, new Vector3(camera.transform.position.x,
+                                            camera.transform.position.y, 0), transform.rotation);
+      Time.timeScale = 0f;
     }
   }
 }

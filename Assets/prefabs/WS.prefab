@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b2574932c17bd4b944a3cbbc270027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ativo: 0
 --- !u!114 &114527894486511048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,3 +58,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tijolo: {fileID: 8589951500702288453, guid: 53a8c064c2da64949b3a0db21a6fd741, type: 3}
+  perdeu: {fileID: 4094657853396496374, guid: 43f216c7033c1fd458e27773b487a628, type: 3}
