@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8266935, y: 0.56200004}
   m_AnchorMax: {x: 0.8266935, y: 0.56200004}
-  m_AnchoredPosition: {x: -8.5, y: 2686.9}
-  m_SizeDelta: {x: 340.64, y: 294.83}
+  m_AnchoredPosition: {x: -263.86, y: 5574.3}
+  m_SizeDelta: {x: 841.4, y: 615.1}
   m_Pivot: {x: 0.47644347, y: 9.6047735}
 --- !u!114 &1013385785
 MonoBehaviour:
@@ -567,7 +567,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.028924897, g: 0.42934602, b: 0.4716981, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -687,8 +687,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897842474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.42, y: -0.14, z: 0}
-  m_LocalScale: {x: 6.238706, y: 5.519742, z: 1}
+  m_LocalPosition: {x: -8.39, y: -4.57, z: 0}
+  m_LocalScale: {x: 0.5228393, y: 0.43807974, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
