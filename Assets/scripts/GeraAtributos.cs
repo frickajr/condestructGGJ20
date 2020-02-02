@@ -55,7 +55,8 @@ public class GeraAtributos : MonoBehaviour
     {
         GUIStyle style = new GUIStyle();
         style.normal.textColor = Color.black;
-        GUI.Label(new Rect(530, 180, 100, 20), $"Z: {GetDestruir()} | X: {GetConstruir()} ",style);
+        style.fontSize = 40;
+        GUI.Label(new Rect(10, 10, 100, 20), $"Z: {GetDestruir()} | X: {GetConstruir()} ",style);
     }
 
 }
