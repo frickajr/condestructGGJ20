@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class dinu : MonoBehaviour
 {    Rigidbody2D rb;
-     RaycastHit2D objetoemcontato;  
-    private bool nochao;
+     private bool nochao;
      Animator anim;
      SpriteRenderer m_SpriteRenderer;
 
@@ -24,7 +23,7 @@ public class dinu : MonoBehaviour
     {
         rb.velocity = new Vector2(4* Input.GetAxis("Horizontal"), rb.velocity.y);
         if(Input.GetKeyDown("space") && nochao){
-            rb.AddForce(Vector3.up * 300);
+            rb.AddForce(Vector3.up * 350);
             nochao = false;
             anim.SetBool("pulo", true);
         }
@@ -38,32 +37,18 @@ public class dinu : MonoBehaviour
         }else{
             anim.SetBool("walk",false);
         }
-
-        objetoemcontato = Physics2D.Raycast(transform.position,
-                              Vector2.down, 0.6f,
-                              1 << LayerMask.NameToLayer("chao"));
-        if (objetoemcontato.collider == null)
-        {
-
-            nochao = true;
-            anim.SetBool("pulo", false);
-        }
-        else
-        {
-            nochao = false;
-        }
-
+         
     }
    
    
    
    
    
-    /* 
+   
     void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.tag == "chao"){
             nochao = true;
             anim.SetBool("pulo", false);
         }
-    }*/
+    }
 }
