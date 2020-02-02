@@ -14,21 +14,26 @@ public class TypeObject {
   public string asset = "";
   public float x = 0.0F;
   public float y = 0.0F;
+  public bool fuiEu = false;
 
-  public TypeObject (ManipuleObject man, string type, string asset, float x, float y) {
+  public TypeObject (ManipuleObject man, string type, string asset, float x, float y, bool fuiEu) {
     this.man = man;
     this.type = type;
     this.asset = asset;
     this.x = x;
     this.y = y;
+    this.fuiEu = fuiEu;
   }
 
   public string ToJson () {
-    return $"{{ type: '{this.type}', asset: '{this.asset}', x: '{this.x}', y: '{this.y}' }}";
+    return $"{{ \"type\": \"{this.type}\", \"asset\": \"{this.asset}\", \"x\": \"{this.x}\", \"y\": \"{this.y}\" }}";
   }
 
   public void Run () {
     switch (this.type) {
+      case "ganhei":
+        this.man.ShowMensagem (this);
+        break;
       case "criar":
         this.man.InstanceObject (this);
         break;
